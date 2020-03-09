@@ -55,7 +55,7 @@
 			</nav>
 		</header>
 		<main role="main">
-			<div class="container mt-1">
+			<div class="container p-5 mt-5">
 				<div class="row">
 					<!-- Content -->
 					@yield('content')
