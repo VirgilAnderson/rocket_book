@@ -9,6 +9,9 @@
 
 		<title>Rocket Book</title>
 
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/3eba662b46.js" crossorigin="anonymous"></script>
+
 		<!-- Bootstrap core CSS -->
 		<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -20,7 +23,7 @@
 		<header>
 			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
 				<a class="navbar-brand" href="{{ url('/') }}">
-						Book List
+						<i class="fas fa-rocket"></i> Rocket Books
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -31,22 +34,22 @@
 						@if (Route::has('login'))
 							@guest
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+									<a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> {{ __('Login') }}</a>
 								</li>
 								@if (Route::has('register'))
 										<li class="nav-item">
-											<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+											<a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> {{ __('Register') }}</a>
 										</li>
 								@endif
 							@else
 								<li class="nav-item">
-									<a class="nav-link" href="{{ route('home')}}">Dashboard</a>
+									<a class="nav-link" href="{{ route('home')}}"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="{{ route('logout') }}"
-													onclick="event.preventDefault();
-													document.getElementById('logout-form').submit();">
-													{{ __('Logout') }}
+										onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">
+											<i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
 									</a>
 									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
 													@csrf
