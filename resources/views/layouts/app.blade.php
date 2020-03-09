@@ -11,6 +11,10 @@
 
 		<!-- Bootstrap core CSS -->
 		<link href="https://getbootstrap.com/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Styles -->
+		<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{{ asset('css/all.css') }}">
 	</head>
 	<body>
 		<header>
@@ -55,7 +59,7 @@
 			</nav>
 		</header>
 		<main role="main">
-			<div class="container p-5 mt-5">
+			<div class="container">
 				<div class="row">
 					<!-- Content -->
 					@yield('content')
